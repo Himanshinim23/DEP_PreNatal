@@ -286,10 +286,11 @@ class _MainPageState extends State<MainPage> {
                                     child: Icon(Icons.calendar_today,
                                         color: Colors.white, size: 30.0),
                                   ))),
-
+                          Padding(padding: EdgeInsets.only(bottom: 16.0)),
                           Text('Months and Days left',
                               textAlign: TextAlign.left,
-                              style: TextStyle(color: Colors.blueAccent,
+                              style: TextStyle(color: Colors.black,
+                                  fontWeight: FontWeight.w700,
                               fontSize: 14)),
                           Text('05/15',
                               textAlign: TextAlign.left,
@@ -379,12 +380,8 @@ class _MainPageState extends State<MainPage> {
                             children: <Widget>[
                               Text('Weekly Exercise',
                                   style: TextStyle(
-                                      color: Colors.pink, fontSize: 18.0)),
-                              Text('My-Playlist',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 20.0)),
+                                      color: Colors.black, fontSize: 18.0,fontWeight: FontWeight.w700,)),
+
                             ],
                           ),
 
@@ -393,7 +390,7 @@ class _MainPageState extends State<MainPage> {
                       Padding(
                         padding: EdgeInsets.all(11.0),
                         child: Icon(Icons.library_music,
-                            color: Colors.pink, size: 99.0),
+                            color: Colors.pink, size: 70.0),
                       ),
                     ],
                   )),
@@ -418,16 +415,17 @@ class _MainPageState extends State<MainPage> {
                                   child: Padding(
                                     padding: EdgeInsets.all(10.0),
                                     child: Icon(Icons.chat_bubble,
-                                        color: Colors.white, size: 20.0),
+                                        color: Colors.white, size: 40.0),
                                   ))),
+                          Padding(padding: EdgeInsets.only(bottom: 16.0)),
                           Text('Forum',
-                              style: TextStyle(color: Colors.redAccent,
-                              fontSize: 18,
+                              style: TextStyle(color: Colors.black,
+                              fontSize: 25,
                                 fontWeight: FontWeight.w700)),
                           Text('Tap to Read',
                               style: TextStyle(
-                                  color: Colors.black,
-                                  
+                                  color: Colors.black45,
+
                                   fontSize: 16.0))
                         ],
                       ),
@@ -457,15 +455,17 @@ class _MainPageState extends State<MainPage> {
                                     child: Icon(Icons.location_searching,
                                         color: Colors.white, size: 30.0),
                                   ))),
-                          Text('Hospitals Nearby',
-                              style: TextStyle(color: Colors.pinkAccent,
-                              fontSize: 16,
-                                fontWeight: FontWeight.w700)),
+                          Padding(padding: EdgeInsets.only(bottom: 16.0)),
+
                           Text('Maps',
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.w700,
-                                  fontSize: 30.0))
+                                  fontSize: 30.0)),
+                          Text('Hospitals Nearby',
+                              style: TextStyle(color: Colors.black45,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700))
                         ],
                       ),
 
