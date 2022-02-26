@@ -14,6 +14,8 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  int _selectedIndex = 0;
+
   final List<List<double>> charts = [
     [
       0.0,
@@ -229,6 +231,12 @@ class _MainPageState extends State<MainPage> {
   String actualDropdown = chartDropdownItems[0];
   int actualChart = 0;
 
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -240,6 +248,7 @@ class _MainPageState extends State<MainPage> {
                   color: Colors.black,
                   fontWeight: FontWeight.w700,
                   fontSize: 30.0)),
+
           actions: <Widget>[
             Container(
               margin: EdgeInsets.only(right: 8.0),
@@ -259,6 +268,21 @@ class _MainPageState extends State<MainPage> {
               ),
             )
           ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Tools',
+            ),
+
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
         ),
         body: StaggeredGrid.count(
           crossAxisCount: 2,
