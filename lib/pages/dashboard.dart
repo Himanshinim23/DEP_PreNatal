@@ -284,6 +284,25 @@ class _MainPageState extends State<MainPage> {
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
         ),
+      bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Tools',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Baby Care',
+            ),
+
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+        ),
         body: StaggeredGrid.count(
           crossAxisCount: 2,
           crossAxisSpacing: 12.0,
